@@ -77,7 +77,10 @@ def generate_custom_test(CFG_ORIGIN_PATH, CFG_FOLDER_PATH, CFG_TEST_FILE):
         
 if __name__=="__main__" :
     CFG_ORIGIN_PATH='./cfg/origin/'
-    CFG_TRAIN_FILE='yolov4_custom_train.cfg'
+    if tiny == 1:
+      CFG_TRAIN_FILE='yolov4_custom_tiny.cfg'
+    else:
+      CFG_TRAIN_FILE='yolov4_custom_train.cfg'
     CFG_FOLDER_PATH='./cfg/'
     CFG_TEST_FILE='yolov4_custom_test.cfg'
     
